@@ -1,0 +1,1433 @@
+/* 
+    This is the whole CSS for the "operating sistem" 
+
+    version 1.0
+*/
+
+/* 
+    V A R I A B L E S 
+*/
+:root{
+    --fontsize: 0px ;
+
+    --text-color: black;
+
+    --bakground-color: #008080;
+    --selection-color: #000080;
+    --body-color: #c3c3c3;
+    --secbody-color: #a0a0a0;
+    --terbody-color: #808080;
+
+    --notes-color: #fcfc00;
+}
+
+/*
+    I N I T I A L   C O N F I G
+*/
+*{
+    image-rendering: pixelated;
+
+    font-family: F95;
+    font-smooth: none;
+
+    font-size: calc(16px - var(--fontsize));
+}
+
+html{
+    margin: 0;
+    padding: 0;
+
+    scrollbar-width: 24px;
+}
+
+::-webkit-scrollbar {
+    color: var(--selection-color);
+    width: 24px;
+    height: 24px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--body-color);
+  padding: 24px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+    background: var(--secbody-color);
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+    background: var(--terbody-color);
+    border-style: solid;
+    border-color: black white white black;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement{
+    background-image: url("./icons/System/button-arrow-up.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    height: 24px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment{
+    background-image: url("./icons/System/button-arrow-down.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    height: 24px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement{
+    background-image: url("./icons/System/button-arrow-left.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    width: 24px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    background-image: url("./icons/System/button-arrow-right.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    width: 24px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+::selection{
+    background: var(--selection-color);
+    color: white;
+    text-shadow: none;
+}
+::-moz-selection{
+    background: var(--selection-color);
+    color: white;
+    text-shadow: none;
+}
+
+
+
+/*
+    S T A R T   M E N U 
+*/
+
+/* BAR ANIMATION */
+@keyframes moving{
+    0%{
+        background-position: 0% 0%;
+    }
+    
+    50%{
+        background-position: 50% 50%;
+    }
+
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+.Startmenu{
+    margin: 0;
+    padding: 0;
+
+    background: url(./images/Win95bootsm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: start center;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-bar{
+    position: absolute;
+    display: flex;
+    margin-top: auto;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+
+    background: linear-gradient(90deg,rgba(6, 139, 191, 1) 0%, rgba(171, 171, 171, 1) 15%, rgba(171, 171, 171, 1) 35%, rgba(6, 139, 191, 1) 50%, rgba(171, 171, 171, 1) 65%, rgba(171, 171, 171, 1) 85%, rgba(6, 139, 191, 1) 100%);
+    background-size: 200% 200%;
+    animation-name: moving;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 0;
+}
+
+
+
+/* 
+    S Y S T E M   F O N T S
+*/
+
+/* DEFAULT BASIC TEXT FONT */
+@font-face {
+    font-family: F95;
+    src: url(./Fonts/MSSansSerif8pt.ttf);
+}
+
+/* DEFAULT TITLES TEXT FONT */
+@font-face {
+    font-family: TimesNew95;
+    src: url(./Fonts/pixelated-times-new-roman.otf);
+}
+
+/* DEFAULT TRMINAL TEXT FONT */
+@font-face {
+    font-family: Marlet;
+    src: url(./Fonts/Marlet.ttf);
+}
+@font-face {
+    font-family: ACE;
+    src: url(./Fonts/ace.ttf);
+}
+
+
+
+/*
+    B A S I C   C S S   S T Y L E
+*/
+
+h1{
+    font-family: TimesNew95;
+    font-weight: 100;
+    font-size: calc(60px - var(--fontsize));
+
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+button, select{
+    
+
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+
+    min-width: 24px;
+    min-height: 24px;
+}
+input[type="radio"]{
+    appearance: none;
+    -moz-appearance: none;
+
+    box-sizing: border-box;
+    
+    width: calc(16px - var(--fontsize));
+    height: calc(16px - var(--fontsize));
+    margin: 0px;
+    padding: 0;
+    
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+
+    border-radius: 10px;
+}
+input[type="radio"]:checked{
+    outline: white 3px solid;
+    outline-offset: -5px;
+    background-color: black;
+    border-width: 3px;
+}
+input[type="range"]{
+    appearance: none;
+
+    width: 150px;
+    height: 0px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    background-color: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+}
+input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: calc(13px - var(--fontsize));
+    height: calc(24px - var(--fontsize));;
+    background: url(./icons/rangehor.ico) no-repeat;
+
+    border: none;
+    border-radius: 0;
+
+    cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb{
+    appearance: none;
+    width: calc(13px - var(--fontsize));
+    height: calc(24px - var(--fontsize));;
+    background: url(./icons/rangehor.ico) no-repeat;
+
+    border: none;
+    border-radius: 0;
+    scale: 1.2;
+
+    cursor: pointer;
+}
+input[type="text"]{
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    box-shadow: -1px -1px var(--body-color) inset;
+
+    width: 100%;
+    max-height: 15px;
+    margin-top: 3px;
+}
+input[type="text"]:focus{
+    outline: none;
+}
+
+
+
+/* 
+    D E S K T O P 
+*/
+
+.Desktop{
+    width: 100%;
+    height: 100vh;
+
+    font-family: F95;
+    font-smooth: none;
+
+    background: var(--bakground-color);
+    background-repeat: repeat;
+    background-size: 500px;
+    background-clip: content-box;
+    color: white;
+    -webkit-user-drag: none;
+}
+
+.Desktop img{
+    -webkit-user-drag: none;
+}
+
+.overlay{
+    height: 100%;
+    padding: 4px;
+}
+
+.desktop_button{
+    display: block;
+
+    width: 90px;
+    height: 80px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: white;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+.desktop_button:hover p, .desktop_button:hover .appicon{
+    background: var(--selection-color);
+}
+
+.desktop_button p{
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 4px;
+    margin: 0;
+}
+
+.appicon{
+    width: 40px;
+}
+
+.appdecor{
+    position: absolute;
+
+    transform: translate(-40px, 8px);
+}
+
+
+
+/*
+    B U T T O N S
+*/
+button{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
+
+button:active{
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color); 
+    box-shadow: none;
+}
+button:focus {
+    outline: 2px dotted black;
+    outline-offset: -6px;
+    box-shadow: -1px -1px var(--terbody-color) inset, 0px 0px 0px 2px black;
+}
+button[disabled]{
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+    pointer-events: none;
+}
+button[disabled] img{
+    transform: translate(1px, 1px);
+    filter:invert(1) brightness(0.5) drop-shadow(1px 1px 0px white);
+}
+.button_noborder{
+    border: none;
+    box-shadow: none;
+}
+.button_noborder:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.button_noborderdisabled{
+    border: none;
+    box-shadow: none;
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+}
+.button_noborderdisabled:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.desktop_button:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.input{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    margin: 4px;
+
+    width: 16px;
+    height: 16px;
+    margin-bottom: 10px;
+
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
+
+.input input[type=checkbox]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.Checkmark{
+    position: absolute;
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+    top: 0px;
+    left: 0px;
+    height: 16px;
+    width: 16px;
+    filter: brightness(1.75);
+    text-shadow: 1px 1px 0px white;
+}
+
+.input input[type=checkbox]:checked ~ .Checkmark{
+    color: black;
+    display: block;
+    filter: brightness(0);
+}
+
+
+
+/*
+    C O N T E X T   M E N U
+*/
+#contextmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--body-color) black black var(--body-color);    
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
+
+    width: auto;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+
+#contextmenu > button{
+    width: 100%;
+
+    border: none;
+    box-shadow: none;
+    
+    padding-top: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+    white-space: nowrap;
+    background-color: transparent;
+
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+#contextmenu > button > img{
+    width: 32px;
+
+    image-rendering: pixelated;
+    vertical-align: middle;
+}
+
+#contextmenu > button:hover{
+    color: white;
+    background: var(--selection-color);
+
+    text-shadow: none;
+}
+
+#contextmenu > button:focus{
+    outline: none;
+}
+
+#contextmenu > button:hover > img{
+    filter: invert();
+}
+
+#contextmenu > hr {
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    border-style: solid;
+}
+
+.disabled{
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+}
+.disabled:active{
+    border-color: white black black white;
+    box-shadow: none;
+}
+.disabled > img {
+    transform: translate(1px, 1px);
+    filter:invert(1) brightness(0.5) drop-shadow(1px 1px 0px white);
+}
+
+
+
+/* 
+    T A S K B A R 
+*/
+
+#taskbar{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 3px 4px 3px;
+
+    background-color: var(--body-color);
+
+    border-color: white white white white;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+
+    z-index: 100000;
+    display: flex;
+}
+
+#taskbar div{
+    display: flex;
+}
+
+#taskbar hr{
+    padding: 0px;
+    margin: 0px 3px 0px 3px;
+
+    width: 0px;
+
+    height: 24.5px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+}
+
+.taskbar-button{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 4px 0px 4px;
+    margin: 0px;
+    gap: 2px;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
+
+.taskbar-button:active{
+    background-color: var(--secbody-color);
+    border-color: black white white black;
+}
+
+.taskbar-button p{
+    text-align: center;
+    vertical-align: middle;
+
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+
+    line-height: 0px;
+}
+
+.taskbar-button img{
+    width: 24px;
+    height: 24px;
+}
+
+/*
+    T A S K B A R  -  S T A R T   B U T T O N
+*/
+
+.StartButton{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 4px 0px 4px;
+    margin: 0px;
+    gap: 2px;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
+
+.StartButton:active{
+    background-color: var(--secbody-color);
+    border-color: black white white black;
+}
+
+.StartButton img{
+    width: 24px;
+    height: 24px;
+}
+
+.StartButton p{
+    text-align: center;
+    vertical-align: middle;
+
+    font-weight: 700;
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+
+    line-height: 0px;
+}
+
+/* 
+    T A S K B A R  -  S O C I A L
+*/
+
+#atachesdarea{
+    display: flex;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+    background-color: transparent;
+}
+
+#atachesdarea button{
+    background-color: transparent;
+    border: transparent;
+}
+
+#atachesdarea button:hover{
+    background: var(--selection-color);
+}
+
+#atachesdarea button:active img{
+    filter: invert();
+}
+
+#atachesdarea button img{
+    padding: 0;
+    margin: 0;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/* 
+    T A S K B A R  -  W I D G E T S 
+*/
+
+#widgetsarea {
+    display: flex;
+    flex-direction: row;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+#widgetsarea button{
+    background-color: transparent;
+    border-style: none;
+    height: 24px;
+}
+
+#widgetsarea button img{
+    padding: 0px;
+    margin: 0px;
+
+    width: 24px;
+    height: 24px;
+}
+
+#widgetsarea p{
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+    line-height: 0px;
+    color: black;
+}
+
+#tasksarea{
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+}
+#tasksarea button{
+    margin-right: 3px;
+}
+/*.Apps button{
+    background-image: radial-gradient(var(--body-color) 1px, white 1px);
+    background-size: 3px 3px;
+}
+    APPS SELECIONADAS */
+
+
+
+/* 
+    N O T I F I C A T I O N S 
+*/
+.Notification{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 9999;
+
+    padding: 12px;
+
+    color: black;
+    background-image: radial-gradient(var(--notes-color) 1px, white 1px);
+    background-size: 4px 4px;
+
+    font-size: calc(16px - var(--fontsize));
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+.Notification button{
+    position: absolute;
+
+    margin: 0;
+    padding: 0;
+    
+    width: 22px;
+    height: 24px;
+
+    right: 10px;
+    background-color: transparent;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+}
+
+.Notification button:active{
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+
+    background-image: radial-gradient(var(--body-color) 1px, white 1px);
+    background-size: 4px 4px;
+}
+
+.Notification div{
+    display: flex;
+}
+
+.Notification img{
+    width: 24px;
+    height: 24px;
+
+    padding: 0px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+
+.Notification h4{
+    margin: 0;
+    padding: 0;
+
+    vertical-align: middle;
+    padding-top: 4px;
+}
+
+.Notification p{
+    margin: 0;
+}
+
+.Notification button img{
+    width: 13px;
+    height: 30px;
+    position: absolute;
+    top: -5px;
+    right: -4px;
+
+}
+
+/* 
+    W I N D O W S 
+*/
+
+.Window{
+    position:absolute;
+    z-index: 1;
+
+    font-size: calc(16px - var(--fontsize));
+    padding: 2px;
+    padding-right: 3px;
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--body-color) black black var(--body-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+.Menu{
+    position:absolute;
+    z-index: 1;
+
+    font-size: calc(16px - var(--fontsize));
+    padding: 2px;
+    padding-right: 3px;
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--body-color) black black var(--body-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+.WInterior{
+    padding: 4px;
+
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
+
+    height: 100%;
+    margin-bottom: 1px;
+
+    box-sizing: border-box;
+}
+.WTerminal{
+    font-family: CMD;
+    padding: 10px;
+    gap: 0;
+    margin: 0;
+
+    display: block;
+
+    background-color: black;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px black inset;
+
+    height: 100%;
+    margin-bottom: 1px;
+
+    box-sizing: border-box;
+
+    overflow-y:auto;
+    overflow-x:auto;
+    font-weight:lighter;
+}
+.WTerminal p{
+    font-family: CMD;
+    color: white;
+    line-height: 1;
+
+    word-break:normal;
+    height: auto;
+    margin: 0;
+    font-weight:lighter;
+}
+.WTerminal span{
+    font-family: CMD;
+    color: white;
+    word-spacing: -2px;
+    margin: 0;
+    font-weight:lighter;
+}
+.WTerminal input[type="text"]{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+
+    box-sizing: border-box;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    font-family: CMD;
+    font-weight:lighter;
+}
+.WTerminal input[type="text"]:focus{
+    outline: none;
+}
+.WNavegation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+.WNavegation select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    box-shadow: -1px -1px var(--body-color) inset, 1px 1px white inset;
+    
+
+    padding-left: 28px;
+    padding-right: 32px;
+
+    background: url(./icons/button-down.svg) 100% / 20% no-repeat;
+    background-color: white;
+}
+.WNavegation br{
+    padding: 4px;
+}
+.WNavegation button{
+    width: 26px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+#tabpanel p{
+    margin: 0;
+}
+#tabpanel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.WNavInterior{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    gap: 0;
+
+    height: 100%;
+
+    box-sizing: border-box;
+}
+.WNavInterior nav{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 5px;
+    gap: 0;
+}
+.WNavInterior nav button{
+    gap: 0;
+    margin: 0;
+    padding: 4px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform: translateY(2px);
+
+    box-shadow: none;
+    border-color: white black white white;
+}
+.WNavInterior nav button:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: white black var(--body-color) white;
+}
+.WNavInterior nav button::selection{
+    border-color: white black var(--body-color) white;
+}
+.WNavInterior section{
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+
+    height: 100%;
+    margin-bottom: 8px;
+}
+.WNavInterior div{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    justify-content: flex-end;
+}
+.WNavInterior div button{
+    min-width: 90px;
+}
+/*
+    W I N D O W  -  T O P   B A R
+*/
+.WTop-Bar{
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+
+
+    justify-content: space-between;
+    height: 26px;
+
+    align-items: center;
+    padding: 2px 4px 2px 4px;
+    margin-bottom: 2px;
+
+    background: var(--terbody-color);
+    color: var(--body-color);
+
+    line-height: 0;
+}
+
+.WTop-Bar > div{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex-wrap: nowrap;
+    padding-left: 2px;
+}
+
+.WTop-Bar > div > p{
+    left: 6px;
+    top: 2px;
+    text-align: left;
+    font-weight:bolder;
+    font-size: calc(16px - var(--fontsize));
+}
+
+.WTop-Bar > div > img{
+    transform: translateX(-2px)translateY(4px);
+
+    width: 24px;
+    height: 24px;
+
+    margin-right: 2px;
+}
+.WTop-Bar > div > button{
+    height: 14px;
+    width: 16px;
+
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+
+    
+    line-height: 0px;
+
+    box-shadow: -1px -1px var(--terbody-color) inset;
+    padding: 0;
+    margin: 0;
+}
+
+.WTop-Bar > div > button:active{
+    outline: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    box-shadow: 1px 1px var(--terbody-color) inset;
+    
+    line-height: 0px;
+}
+.WTop-Bar > div > button.disabled:active{
+    border-color: white black black white;
+    box-shadow: none;
+
+}
+.WTop-Bar > div > button:focus{
+    outline: none;
+}
+.WTop-Bar > div > button:active > img{
+    transform: translate(calc(-50% + 1px), calc(-50% + 1px));
+}
+.WTop-Bar > div > button.disabled:active > img {
+    transform: translate(calc(-50%), calc(-50%));
+}
+
+.WTop-Bar > div > button > img{
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+
+    line-height: 0px;
+
+    transform: translate(calc(-50%), calc(-55%));
+    width: 13px;
+
+    -webkit-user-drag:none;
+    pointer-events: none;
+}
+
+.WTop-Bar-detectable{
+    display: flex;
+}
+.WTop-Bar > div > button > img[alt="h"]{
+    transform: translate(-55%, -55%) scale(0.75);
+}
+.WTop-Bar > div > button > img[alt="0"]{
+    transform: translate(-60%, 20%) scale(0.8);
+}
+.WTop-Bar > div > button:nth-child(3):has(img[alt="r"]){
+    margin-left: 2px
+}
+.WTop-Bar > div > button:nth-child(4):has(img[alt="r"]){
+    margin-left: 2px
+}
+
+.WContent{
+    margin: 0px;
+    padding: 0;
+
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 27px);
+}
+
+.WNotes{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white  white var(--terbody-color);
+
+    inset: 0;
+    background-image: radial-gradient(var(--notes-color) 1px, white 1px);
+    background-size: 4px 4px;
+}
+
+.Wsided-left{
+    display: flex;
+
+}
+
+.Wbottom-expand{
+    font-family: Marlet;
+    font-size: calc(16px - var(--fontsize));
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+
+    color: var(--terbody-color);
+    text-shadow: white -1px -1px;
+}
+
+
+
+/* 
+    M A I N   M E N U
+*/
+.minmenu{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+} .title{
+    width: 36px;
+    height: 100%;
+    background-color:var(--terbody-color); 
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+.minmenu h1{
+    font-family: ACE;
+    writing-mode: sideways-lr;
+    text-orientation:mixed;
+
+    font-size: 24px;
+    font-weight: 900;
+    transform: translateX(12px);
+
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+
+    color: var(--body-color);
+    box-sizing: border-box;
+}
+.minmenu span{
+    font-family:ACE;
+    font-size: 24px;
+    color:white;
+    font-weight: 100;
+}
+.minmenu img{
+
+    display: block;    
+}
+
+.minmenu div button{
+    border: none;
+    background-color: transparent;
+    text-align: start;
+
+    height: 40px;
+
+    display: flex;
+        gap: 4px;
+        vertical-align: middle;
+
+    align-items: center;
+}
+
+.minmenu div button img{
+    display: flex;
+
+    position: relative;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.minmenu div button:hover{
+    background: var(--selection-color);
+    color: white;
+    text-shadow: none;
+}
+.minmenu div button:hover p{
+    color: white;
+    text-shadow: none;
+}
+
+.minmenu div hr{
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    border-style: solid;
+
+    width: 95%;
+}
+
+.minmenu div button:hover .arrow{
+    filter: invert();
+}
+
+#secmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    margin: 0;
+    font-size: calc(16px - var(--fontsize));
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+    width: 200px;
+}
+
+#secmenu button{
+    border: none;
+    background-color: transparent;
+    text-align: start;
+
+    height: 26px;
+
+    display: flex;
+    gap: 4px;
+    vertical-align: middle;
+
+    align-items: center;
+    width: 100%;
+}
+
+#secmenu button:hover{
+    background: var(--selection-color);
+    color: white;
+}
+
+#secmenu button:hover .arrow{
+    filter: invert();
+}
+
+#secmenu button img{
+    max-height: 24px;
+
+}
+
+.arrow{
+    width: 24px;
+    position: absolute;
+    right: 0;
+}

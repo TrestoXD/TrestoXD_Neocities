@@ -48,6 +48,7 @@ header img {
     image-rendering: pixelated;
 
     margin-top: 10px;
+
 }
 
 header a {
@@ -90,4 +91,11 @@ main button{
     font-size: 26px;
 
     border-radius: 5px;
+    box-shadow: 10px 10px 20px black;
+
+    cursor: pointer;
+}
+
+main img{
+    filter: drop-shadow(10px 10px 20px black);
 }

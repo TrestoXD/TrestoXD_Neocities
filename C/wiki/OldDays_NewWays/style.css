@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Monocraft';
+  src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/dist/Monocraft-ttf/Monocraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
       background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("stone_background.png");
     background-repeat: repeat;
@@ -18,6 +25,27 @@ body{
 }
 a{ color:rgb(170, 156, 255); 
 text-decoration: none;}
+
+table{
+    margin: 1em 1em 1em 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(stone_background.png);
+    background-size: 40px 40px;
+    border-collapse: collapse;
+    filter: drop-shadow(10px 10px 20px black);
+
+    font-weight:normal;
+    font-family: 'Monocraft', monospace;
+
+    width: 960px;
+}
+th{
+    padding: 5px;
+    border: #000000 3px solid;
+}
+th > img{
+    height: 125px;
+    width: auto;
+}
 
 header {
     display: flex;

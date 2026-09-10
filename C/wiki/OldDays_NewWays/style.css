@@ -14,9 +14,10 @@ body{
     text-decoration: none;
     font-family: sans-serif;
     transition: color 0.2s;
-    font-size: 16px;
+    font-size: 14px;
 }
-a{ color:rgb(157, 140, 255); }
+a{ color:rgb(170, 156, 255); 
+text-decoration: none;}
 
 header {
     display: flex;

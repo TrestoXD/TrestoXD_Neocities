@@ -66,7 +66,7 @@ if(volume_widget){
     const volumepos = document.getElementById("widgetsarea");
 
     volumediv.innerHTML = `
-        <button id="Volume_Widget" class="button_noborder" onclick="SoundmenuEXE()"> <img src="./Styles/icons/System/sound.png"> </button>
+        <button id="Volume_Widget" class="button_noborder" onclick="soundmenuexe(this)"> <img src="./Styles/icons/System/sound.png"> </button>
     `
     volumepos.innerHTML += volumediv.innerHTML
 }

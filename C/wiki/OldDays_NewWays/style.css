@@ -47,6 +47,15 @@ th > img{
     width: auto;
 }
 
+.col{
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     display: flex;
     flex-direction: row;

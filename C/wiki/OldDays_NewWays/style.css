@@ -1,9 +1,38 @@
+/* GENERAL */
+*{
+    font-size: 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+br{
+    margin: 5px;
+}
+
+/* TEXT */
 @font-face {
   font-family: 'Monocraft';
   src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/dist/Monocraft-ttf/Monocraft.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+a{ color:rgb(170, 156, 255); 
+text-decoration: none;}
+
+p{
+    margin: 0;
+    color: rgb(201, 201, 201);
+}
+
+h1{
+    font-size: xx-large;
+}
+h2{
+    font-size: x-large;
+}
+
+
 
 body{
       background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("stone_background.png");
@@ -18,13 +47,8 @@ body{
     font-family: heveltica, sans-serif;
 
     color: rgb(201, 201, 201);
-    text-decoration: none;
-    font-family: sans-serif;
-    transition: color 0.2s;
-    font-size: 14px;
 }
-a{ color:rgb(170, 156, 255); 
-text-decoration: none;}
+
 
 table{
     margin: 1em 1em 1em 0;

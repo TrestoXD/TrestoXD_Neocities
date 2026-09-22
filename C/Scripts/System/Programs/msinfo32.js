@@ -29,8 +29,7 @@ function msinfo32exe(){
             </div>
         </section>
         <div>
-            <button>Ok</button>
-            <button onclick="LocateCloseWindow(this)" >Cancel</button>
+            <button onclick="LocateCloseWindow(this)" >Ok</button>
         </div>
     </div>
     `).BuildWindow();

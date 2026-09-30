@@ -52,7 +52,7 @@ body{
 
 table{
     margin: 1em 1em 1em 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(stone_background.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(stone_background.png);
     background-size: 40px 40px;
     border-collapse: collapse;
     filter: drop-shadow(10px 10px 20px black);
@@ -62,9 +62,11 @@ table{
 
     width: 960px;
 }
-th{
-    padding: 5px;
-    border: #000000 3px solid;
+th,td{
+
+    border: #373737 1px solid;
+    font-weight:normal;
+    font-family: 'Monocraft', monospace;
 }
 th > img{
     height: 125px;
@@ -164,4 +166,76 @@ main img{
 
 .mini-sections{
     max-height: 350px;
+}
+
+.odnw-i-useful-links-item{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+    width: fit-content;
+    line-height: 1.6;
+}
+.odnw-i-useful-links-item > div:has(img){
+    background: url(./stone_background.png);
+    background-size: 64px;
+    padding: 4px;
+
+    width: 128px;
+    height: 128px;
+}
+.odnw-i-useful-links-item:hover{
+    filter: brightness(1.25);
+}
+
+img-pixelated{
+    image-rendering: pixelated;
+}
+
+.odnw-table{
+    border: none;
+}
+
+.crafting-table-ui{
+    padding: 6px;
+    border-image-slice: 3 3 3 3;
+    border-image-width: 6px 6px 6px 6px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(./Border.png);
+    border-style: solid;
+    image-rendering: crisp-edges;
+    background: #c6c6c6;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.inventory-slot{
+    width: 32px;
+    height: 32px;
+    position: relative;
+
+    border-top: 2px solid #373737;
+    border-left: 2px solid #373737;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #8b8b8b;
+}
+
+.result-slot{
+    width: 44px;
+    height: 44px;
+    position: relative;
+
+    border-top: 2px solid #373737;
+    border-left: 2px solid #373737;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #8b8b8b;
+}
+
+.no-external-icon img{
+    image-rendering:pixelated;
+    width: 32px;
+    height: 32px;
 }

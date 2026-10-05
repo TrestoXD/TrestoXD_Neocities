@@ -3,6 +3,9 @@
     font-size: 16px;
     text-decoration: none;
     font-family: sans-serif;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 br{
@@ -64,7 +67,6 @@ table{
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(stone_background.png);
     background-size: 40px 40px;
     border-collapse: collapse;
-    filter: drop-shadow(10px 10px 20px black);
 
     font-weight:normal;
     font-family: 'Monocraft', monospace;
@@ -169,10 +171,6 @@ main button{
     cursor: pointer;
 }
 
-main img{
-    filter: drop-shadow(10px 10px 20px black);
-}
-
 .mini-sections{
     max-height: 350px;
 }
@@ -184,14 +182,30 @@ main img{
     row-gap: 0.5em;
     width: fit-content;
     line-height: 1.6;
+
+    flex: 1 1 calc(33.333% - 8px);
+    max-width: calc(33.333% - 8px);
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .odnw-i-useful-links-item {
+        flex: 1 1 calc(50% - 8px);
+        max-width: calc(50% - 8px);
+    }
+}
+@media (max-width: 600px) {
+    .odnw-i-useful-links-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 .odnw-i-useful-links-item > div:has(img){
     background: url(./stone_background.png);
-    background-size: 64px;
-    padding: 4px;
+    background-size: 32px;
+    padding: 6px;
 
-    width: 128px;
-    height: 128px;
+    width: 192px;
+    height: 192px;
 }
 .odnw-i-useful-links-item:hover{
     filter: brightness(1.25);
@@ -215,7 +229,9 @@ img-pixelated{
     flex-direction: column;
 }
 .odnw-list li{
-    padding: 5px;
+    padding: 10px;
+
+    scale: 1.25;
 }
 .odnw-list > header{
     display: flex;
@@ -223,8 +239,8 @@ img-pixelated{
 }
 .odnw-list img{
     vertical-align: middle;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     padding-right: 10px;
     background-size: 256px auto;
 }

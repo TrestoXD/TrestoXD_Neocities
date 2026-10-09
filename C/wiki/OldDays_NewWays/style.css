@@ -258,6 +258,22 @@ img-pixelated{
     display: inline-flex;
     align-items: center;
     position: relative;
+    color: #3f3f3f;
+}
+.inventory-ui{
+    padding: 6px;
+    border-image-slice: 3 3 3 3;
+    border-image-width: 12px 12px 12px 12px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(./Border.png);
+    border-style: solid;
+    image-rendering: crisp-edges;
+    background: #c6c6c6;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    color: #3f3f3f;
 }
 .inventory-slot{
     width: 32px;

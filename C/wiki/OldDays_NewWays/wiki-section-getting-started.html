@@ -23,18 +23,13 @@
         <hr style=" width: 100%;">
         <p>You entered to your Minecraft world, you gathered some wood and go directly to the mines to mine something right? WOPS! you can't mine iron with a stone picaxe, instead you need first to gather the copper tools.</p>
         <p>Some things you might need</p>
-        <table class="odnw-table" style="width: fit-content;">
-            <thead>
+        <div>
+        <table class="inventory-ui" style="width: fit-content; display: flex; flex-direction: column;">
+            <tbody style="margin: 6px;">
                 <tr>
-                    <th tabindex="0" role="columnheader button" title="Sort ascending">Name</th>
-                    <th>Crafting recipe</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>A bed</th>
-                    <td>
-                        <div class="crafting-table-ui">
+                    <th style="border: none; padding-right: 12px; width: 100px;" >Crafting recipe of a bed</th>
+                    <td style="border: none;">
+                        <div class="crafting-table-ui" style="border: none;">
                             <div style="display: inline-grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: (3, 1fr);">
                                 <div class="inventory-slot">
                                     <span class="no-external-icon" style="width: 36px; height: 36px;"></span>    
@@ -46,13 +41,13 @@
                                     <span class="no-external-icon" style="width: 36px; height: 36px;"></span>    
                                 </div>
                                 <div class="inventory-slot">
-                                    <span class="no-external-icon" style="width: 36px; height: 36px;"></span>    
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/Invicon_Red_Cushion.png?6df03"></span>    
                                 </div>
                                 <div class="inventory-slot">
-                                    <span class="no-external-icon" style="width: 36px; height: 36px;"></span>    
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/Invicon_Red_Cushion.png?6df03"></span>    
                                 </div>
                                 <div class="inventory-slot">
-                                    <span class="no-external-icon" style="width: 36px; height: 36px;"></span>    
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/Invicon_Red_Cushion.png?6df03"></span>    
                                 </div>
                                 <div class="inventory-slot">
                                     <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="./blocks/Oak_Planks.png"> </span>    
@@ -68,7 +63,7 @@
                                 <img class="" src="result_arrow.png" width="44" height="30">
                             </span>
                             <div class="result-slot">
-                                <span class="no-external-icon" style="width: 36px; height: 36px;"></span>  
+                                <span class="no-external-icon" style="width: 44px; height: 44px; position: relative;"> <img src="https://minecraft.wiki/images/Red_Bed_%28item%29_JE1_BE1.png?520ca" style="padding: 5px; width: 32px; height: 32px;"></span>  
                             </div>
                         </div>
                     </td>
@@ -76,6 +71,54 @@
             </tbody>
             <tfoot></tfoot>
         </table>
+        <table class="inventory-ui" style="width: fit-content; display: flex; flex-direction: column;">
+            <tbody style="margin: 6px;">
+                <tr>
+                    <th style="border: none; padding-right: 12px; width: 152px;" >A copper pickaxe to mine iron, and other blocks faster</th>
+                    <td style="border: none;">
+                        <div class="crafting-table-ui" style="border: none;">
+                            <div style="display: inline-grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: (3, 1fr);">
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/Copper_Ingot_JE1.png?5c409"></span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/Copper_Ingot_JE1.png?5c409"></span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/Copper_Ingot_JE1.png?5c409"></span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> </span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/ItemSprite_stick.png?3a040"></span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> </span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> </span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> <img src="https://minecraft.wiki/images/ItemSprite_stick.png?3a040"></span>    
+                                </div>
+                                <div class="inventory-slot">
+                                    <span class="no-external-icon" style="width: 36px; height: 36px;"> </span>    
+                                </div>
+                            </div>
+                            <span style="margin-left: 6px; margin-right: 6px; pointer-events: none; user-select: none;">
+                                <img class="" src="result_arrow.png" width="44" height="30">
+                            </span>
+                            <div class="result-slot">
+                                <span class="no-external-icon" style="width: 44px; height: 44px; position: relative;"> <img src="https://minecraft.wiki/images/Copper_Pickaxe_JE1_BE1.png?3b91b" style="padding: 5px; width: 32px; height: 32px;"></span>  
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        </div>
     </main>
 </body>
 </html>

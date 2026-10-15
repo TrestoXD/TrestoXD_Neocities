@@ -244,6 +244,21 @@ img-pixelated{
     padding-right: 10px;
     background-size: 256px auto;
 }
+.odnw-list-properties{
+    margin: 0;
+    margin-right: 20px;
+    gap: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.object-entities > ul{
+    flex-grow: 3;
+    width: 200px;
+}
+.object-entities > section{
+    width: 550px;
+}
 
 .crafting-table-ui{
     padding: 6px;

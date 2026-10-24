@@ -18,8 +18,14 @@
         </nav>
     </header>
 
-    <main style="display: flex; justify-content: center; padding: 0;">
-        <table class="inventory-ui">
+    <main style="display: flex; flex-direction: column; justify-content: center; padding: 0;">
+        <h1>World</h1>
+        <hr>
+        <br>
+        <h2>Biomes</h2>
+        <hr>
+        
+        <table class="inventory-ui" style="justify-self: center;">
             <tbody style="margin: 8px;">
                 <tr>
                     <th style="border: none; padding: 4px;">Biome name</th>
@@ -43,6 +49,39 @@
                 </tr>
             </tbody>
         </table>
+
+        <br>
+        <h2>Moons</h2>
+        <hr>
+        <h3>For now there's a total of 3 different moons:</h3>
+
+        <section style="width: 960px; display: flex;">
+            <div>
+                <h3>Twilight Moon</h3>
+                <hr>
+                <p>The Twilight Moon gives you luck making, increasing the loot quality in drops and chests!</p>
+            </div>
+            <img src="mineshaft.png" alt="Mineshaft" style="width: 500px; margin-left: 40px;" class="crafting-table-ui">
+        </section>
+
+        <section style="width: 960px; display: flex;">
+            <img src="crops.png" alt="Crops" style="width: 500px; margin-right:  40px;" class="crafting-table-ui">
+            <div>
+                <h3>New Moon</h3>
+                <hr>
+                <p>The New moon are a lunar event which makes the crops grow much faster!</p>
+            </div>
+        </section>
+
+
+        <section style="width: 960px; display: flex;" >
+            <div>
+                <h3>Breaking Down Moon</h3>
+                <hr>
+                <p>The Breaking Down Moon is a lunar event that makes the monsters increasingly stronger and more dangerous! Besides that the player can't sleep in that night!</p>
+            </div>
+            <img src="zombies.png" alt="Zombies" style="width: 500px; margin-left: 40px;" class="crafting-table-ui">
+        </section>
     </main>
 </body>
 </html>

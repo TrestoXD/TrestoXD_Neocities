@@ -509,6 +509,46 @@ button[disabled] img{
     filter: brightness(0);
 }
 
+/*
+    S U B   M E N U
+*/
+
+.submenu{
+    position:absolute;
+    z-index: 1;
+
+    font-size: calc(16px - var(--fontsize));
+    padding: 1px;
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--body-color) black black var(--body-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+.submenu > div{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.submenu > div > button{
+    border: none;
+    box-shadow: none;
+    text-align: start;
+    padding-left: 25px;
+}
+.submenu > div > button:hover{
+    background-color: #000080;
+    color: white;
+    margin-right: 3px;
+}
 
 
 /*

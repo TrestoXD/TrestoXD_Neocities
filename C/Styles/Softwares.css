@@ -52,13 +52,12 @@ hr{
 }
 
 .notepad{
-    padding-right: 6px;
     padding-left: 2px;
     
     width: 100%;
     height: calc(100% - 53px);
 
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 
     background-color: white;

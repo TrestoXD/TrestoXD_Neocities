@@ -168,6 +168,48 @@ class menu{
         menulocation.insertAdjacentElement("beforeend", menu)
     }
 }
+class submenu{
+    constructor(title = "Hello menu", pid = "00001", width = "150", height = "300",button, once = true, content = 'Hello text'){
+        // MENU VARIABLES
+        this.title = title;
+        this.pid = pid;
+
+        this.width = width;
+        this.height = height;
+        this.button = button;
+        if(this.button == null){
+            console.log("button not specified!")
+        }
+
+        this.content = content
+        
+        let currentpid = parseInt(this.pid);
+        while(document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`)){
+            currentpid++; 
+            this.pid = currentpid.toString().padStart(5, '0');
+        }
+        // MENU BUILDER
+
+        const menu = document.createElement("div");
+        const menupos = button.getBoundingClientRect();
+        const menulocation = document.getElementById("Desktop")
+
+        menu.classList.add("submenu");
+        menu.setAttribute('pid',this.pid);
+        menu.setAttribute('title', this.title);
+        menu.style.width = this.width + "px";
+        menu.style.height = this.height + "px";
+        menu.style.top = (parseInt(menupos.top) + 24) + "px";
+        menu.style.left = parseInt(menupos.left) + "px";
+        menu.style.zIndex = "100001"
+
+        menu.innerHTML = this.content
+
+        menu.onmouseleave = () => menu.outerHTML = '';  
+
+        menulocation.insertAdjacentElement("beforeend", menu)
+    }
+}
 class topbar{
     constructor(title = "Hello World",pid = "00001",image = "./Styles/windowsicons/windows.png",minimizable = true,maximizable = true,closable = true,isdialog = false) {
 

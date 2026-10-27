@@ -17,7 +17,7 @@ let currentselected = 0;
 localStorage.setItem("currentselected", '0');
 
 function mouseDown(e){
-        //console.log("Mousedown")
+        console.log("Mousedown")
         
         var Clicksound = new Audio(Clicksound_data);
         Clicksound.play();
@@ -64,7 +64,7 @@ function mouseDown(e){
             document.getElementById(currentselected).style.color = "var(--body-color)";
             document.getElementById('win'+currentselected).style.zIndex = 1;   
         }else{
-            //console.log(e.target.id)
+            console.log(e.target.id)
         }
 }
 

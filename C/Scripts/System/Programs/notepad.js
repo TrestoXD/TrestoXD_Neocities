@@ -1,7 +1,7 @@
 var reader = new FileReader;
 
 function notepadexe(dir){
-    new explorer("Notepad", undefined,"Notepad is an easy text editor for everyone!","450","265",false,true,false,false,true,true,true,true,true,`
+    new explorer("Notepad", undefined,"Notepad is an easy text editor for everyone!","450","265","./Styles/AppIcons/Notepad.ico",true,true,true,true,true,false,true,true,`
         <div class="explorer_topbar">
         <button class="disabled"><span class="underline">F</span>ile</button>
         <button class="" onclick="notepadeditmenu(this)"><span class="underline">E</span>dit</button>
@@ -23,7 +23,7 @@ function notepadeditmenu(button){
             <button class="disabled"> Undo </button>
             <hr>
             <button class="disabled">Cut</button>
-            <button class="disabled">Copy</button>
+            <button onclick="clipboardcopy()">Copy</button>
             <button class="disabled">Paste</button>
             <button class="disabled">Delete</button>
             <hr>
@@ -43,4 +43,15 @@ function readText(dir){
         notepadtextarea.innerHTML = textString;
     })
     .catch((e) => console.error(e));
+}
+
+function clipboardcopy(){
+    var text = document.getElementById("txt")
+    text.select();
+    text.setSelectionRange(0, 99999);
+
+    console.log(text.innerHTML);
+    navigator.clipboard.writeText(text.innerHTML);
+
+
 }

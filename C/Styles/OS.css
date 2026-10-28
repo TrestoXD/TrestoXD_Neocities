@@ -354,6 +354,12 @@ input[type="text"]:focus{
 .overlay{
     height: 100%;
     padding: 4px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    overflow: auto;
 }
 
 .desktop_button{

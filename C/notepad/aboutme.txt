@@ -1,1 +1,9 @@
-Hola este es un texto de prueba cffff
+---
+text: center
+---
+
+===================================
+Mi nombre es Vito Minaya González
+===================================
+
+Me declaro como programador

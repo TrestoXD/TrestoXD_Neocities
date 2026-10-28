@@ -25,7 +25,7 @@ function WellcomeExe(){
                 <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=NewsEXE()> What's <span class="underline">N</span>ew </button>
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=MycomputerEXE()> <span class="underline">M</span>y Computer </button>
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=CmdEXE()> Ms-<span class="underline">D</span>os Prompt </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=cmdexe()> Ms-<span class="underline">D</span>os Prompt </button>
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=RandomFact()> Next <span class="underline">T</span>ip </button>
                     <hr style="margin-top:80px;">
                 </div>

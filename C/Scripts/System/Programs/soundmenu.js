@@ -1,22 +1,22 @@
-let astate = false;
-let atitle = 'audio'
-let apid = '00010'
+let soundmenustate = false;
+let soundmenutitle = 'audio'
+let soundmenupid = '00010'
 
 function soundmenuexe(button){
-    if(astate == false){
+    if(soundmenustate == false){
 
 
-    new menu(atitle,apid,'50',undefined,button,undefined,`
+    new menu(soundmenutitle,soundmenupid,'50',undefined,button,undefined,`
         <div class="minmenu">
             <p>Audio</p>
         </div>
         `)
-    astate = true;
+    soundmenustate = true;
     }else{
-        CloseMenu(atitle,apid)
+        CloseSoundMenu(soundmenutitle,soundmenupid)
     }
 }
-function CloseMenu(atitle,apid){
-        state = false
-        CloseWindow(atitle,apid)
+function CloseSoundMenu(soundmenutitle,soundmenupid){
+    soundmenustate = false
+    CloseWindow(soundmenutitle,soundmenupid)
 }

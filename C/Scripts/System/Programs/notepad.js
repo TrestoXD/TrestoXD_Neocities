@@ -9,16 +9,17 @@ function notepadexe(dir){
         <button class="disabled"><span class="underline">H</span>elp</button>
     </div>
     <div class="notepad">
-        <textarea id="txt">
-
-        </textarea>
+        <textarea id="txt"></textarea>
     </div>
     `).BuildWindow();
 
-    readText("aboutme");
+    if(dir != null){
+        readText(dir);   
+    }
+    
 }
 function notepadeditmenu(button){
-        new submenu(atitle,apid,'125','222',button,undefined,`
+        new submenu(" ","00002",'155','222',button,undefined,`
         <div class="">
             <button class="disabled"> Undo </button>
             <hr>
@@ -34,15 +35,30 @@ function notepadeditmenu(button){
             </div>
         `)
     }
-
+var notepadtextarea;
 function readText(dir){
     fetch("notepad/"+dir+".txt")
     .then((res) => res.text())
     .then((textString) => {
-        const notepadtextarea = document.getElementById("txt");
+        notepadtextarea = document.getElementById("txt");
+            reviewProperties(textString);
         notepadtextarea.innerHTML = textString;
     })
     .catch((e) => console.error(e));
+}
+
+function reviewProperties(textfromfile){
+    if(textfromfile.includes("---")){
+        console.log("Incluye propiedades");
+        if(textfromfile.includes("text: center")){
+            area = document.getElementById("txt").style.textAlign = "center";
+        }
+        var startPos = textfromfile.indexOf('---') + 1;
+        var endPos = textfromfile.indexOf('---', startPos);
+        var text_to_get = textfromfile.substring(startPos,endPos);
+
+        notepadtextarea = text_to_get;
+    }
 }
 
 function clipboardcopy(){

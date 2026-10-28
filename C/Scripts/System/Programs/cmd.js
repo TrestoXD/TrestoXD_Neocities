@@ -60,6 +60,16 @@ function cmdexe(){
             document.getElementById('inputcommand').outerHTML = `<span>${commandValue}</span>`; 
         }
 
+        //Welcome.exe
+        else if(commandValue == "welcome"){
+            result.innerHTML = `
+            <p> Iniciando Welcome.exe</p>`
+             newPrompt.innerHTML = `<span> C:&#92;Web95 > </span><input type="text" id="inputcommand">`
+            document.getElementById('inputcommand').outerHTML = `<span>${commandValue}</span>`; 
+
+            WelcomeExe();
+        }
+
         //Comando no reconozido
         else{
             result.innerHTML = `

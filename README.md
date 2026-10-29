@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/State-Active-brightgreen?style=plastic)
+
 # Portfolio
 This Portfolio is an Full Recreation of Windows 95 To show off my projects and knowledge in your Website!.
 <hr>

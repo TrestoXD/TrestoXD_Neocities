@@ -13,7 +13,7 @@ const projectcommands = {
     "--list": function() {
         return `
 dungeon 
-portflio 
+portfolio 
 olddays_newways 
 ev
 `;
@@ -22,7 +22,7 @@ ev
         return `
 Commands of Projects:
     --list        
-    --open`;
+    --open (project)`;
     },
     // OPEN
     "--open": function(){
@@ -35,10 +35,11 @@ Commands of Projects:
 - RepoName:    dungeon
 
 - Lenguaje:    [Java]
-- Description: A Java 3D Game Engine made from Scratch without LWJGL 
+- Description: A Java 3D Game Engine made from Scratch 
+               without LWJGL 
         `
     },
-    "--open portflio": function(){
+    "--open portfolio": function(){
         return `
 - Name:        Portfolio
 - RepoLink:    <a href="https://github.com/TrestoXD/TrestoXD_Neocities">LINK</a>

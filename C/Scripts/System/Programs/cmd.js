@@ -10,6 +10,9 @@ const SYSTEM_COMMANDS = {
         if(typeof ProjectsExe === "function") ProjectsExe();
         return "Iniciando proyectos de Github..."
     },
+    "news": function(){
+        if(typeof MsnewsEXE === "function") MsnewsEXE();
+    },
     "help": function() {
         return "Comandos de sistema disponibles: welcome, help, borrate la cuenta";
     }

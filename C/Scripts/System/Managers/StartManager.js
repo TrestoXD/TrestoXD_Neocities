@@ -1,8 +1,8 @@
-console.log("StartManager Runing")
+//console.log("StartManager Runing")
 
 ///// SYSTEM VARIABLES /////
 
-let debuging = true;
+let debuging = false;
 
 let settingsenabled = true;
 let soundenabled = false;

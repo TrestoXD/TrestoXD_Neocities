@@ -164,7 +164,7 @@ hr{
 /* WEB HELP */
 .webhelp{
     width: 100%;
-    height: calc(100% - 26px);
+    height: calc(100% - 32px);
 
     box-sizing: border-box;
 
@@ -514,7 +514,8 @@ hr{
 }
 .whatnewnew h3 {
     padding: 6px;
-    background-color:crimson;
+    background-color:var(--selection-color);
+    color: white;
 
     border-width: 2px;
     border-color: black white white black;

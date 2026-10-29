@@ -6,4 +6,4 @@ This Portfolio is an Full Recreation of Windows 95 To show off my projects and k
 
 WEBSITE: https://trestoxd.neocities.org/
 
-<img width="1387" height="945" alt="Captura de pantalla 2026-04-28 094507" src="https://github.com/user-attachments/assets/1fb00799-59e7-470d-8c8c-ffb6da970cda" />
+<img width="1917" height="943" alt="Captura de pantalla 2026-10-29 131545" src="https://github.com/user-attachments/assets/f215809c-09a9-4f42-8709-f8e1d2f67eef" />

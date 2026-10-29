@@ -24,11 +24,11 @@ function notepadeditmenu(button){
             <button class="disabled"> Undo </button>
             <hr>
             <button class="disabled">Cut</button>
-            <button onclick="clipboardcopy()">Copy</button>
+            <button onclick="edit_clipboardcopy()">Copy</button>
             <button class="disabled">Paste</button>
             <button class="disabled">Delete</button>
             <hr>
-            <button>Select All</button>
+            <button onclick="edit_selectall()">Select All</button>
             <button>Time/Date</button>
             <hr>
             <button>Word Wrap</button>
@@ -41,8 +41,8 @@ function readText(dir){
     .then((res) => res.text())
     .then((textString) => {
         notepadtextarea = document.getElementById("txt");
-            reviewProperties(textString);
-        notepadtextarea.innerHTML = textString;
+        const cleantext = reviewProperties(textString);
+        notepadtextarea.innerHTML = cleantext;
     })
     .catch((e) => console.error(e));
 }
@@ -50,24 +50,22 @@ function readText(dir){
 function reviewProperties(textfromfile){
     if(textfromfile.includes("---")){
         console.log("Incluye propiedades");
-        if(textfromfile.includes("text: center")){
+        if(textfromfile.includes("align: center")){
             area = document.getElementById("txt").style.textAlign = "center";
         }
-        var startPos = textfromfile.indexOf('---') + 1;
-        var endPos = textfromfile.indexOf('---', startPos);
-        var text_to_get = textfromfile.substring(startPos,endPos);
-
-        notepadtextarea = text_to_get;
+        return textfromfile.replace(/^---[\s\S]*?---\s*/, '');
     }
+    return textfromfile
 }
 
-function clipboardcopy(){
+function edit_clipboardcopy(){
     var text = document.getElementById("txt")
     text.select();
     text.setSelectionRange(0, 99999);
 
     console.log(text.innerHTML);
     navigator.clipboard.writeText(text.innerHTML);
-
-
+}
+function edit_selectall(){
+    
 }

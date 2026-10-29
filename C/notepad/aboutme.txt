@@ -1,9 +1,11 @@
 ---
-text: center
+align: center
 ---
 
 ===================================
 Mi nombre es Vito Minaya González
 ===================================
 
-Me declaro como programador
+Me declaro como programador, tengo 18 anos. Actualmente cursando Desarrollo de Aplicaciones Multiplataforma (DAM), con un solido dominio tecnico en multiples lenguajes y pasion por el desarrollo de software. Experiencia practica en C, C++, C#, Java, Python y JavaScript, con conocimientos complementarios en Rust. Enfocado a conseguir un futuro mas brillante, escribir codigo bien optimizado y escalable, y crear soluciones tecnologicas que impacten positivamente a los usuarios. Mi meta actual es seguir expandiendo mis habilidades tecnicas, dominar nuevos paradigmas de desarrollo y colaborar en proyectos desafiantes de ingenieria de software.
+
+En este espacio comparto mis proyectos personales, experimentos de codigo y soluciones a problemas logicos. Siempre estoy abierto a nuevos retos conceptuales y oportunidades de desarrollo colaborativo.

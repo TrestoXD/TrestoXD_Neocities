@@ -4,9 +4,9 @@ function msinfo32exe(){
     <div class="WNavInterior">
         <nav>
             <button>General</button>
-            <button>Device Manager</button>
+            <!--<button>Device Manager</button>
             <button>Hardware Profiles</button>
-            <button>Performance</button>
+            <button>Performance</button>-->
         </nav>
         <section id="tabpanel">    
             <img src="./Styles/images/computermsinfo32.png" style=" width:200px; height: 200px; margin: 25px">

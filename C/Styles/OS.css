@@ -19,6 +19,8 @@
     --terbody-color: #808080;
 
     --notes-color: #fcfc00;
+
+    --commandprompt-textsize: 16px;
 }
 
 /*
@@ -923,7 +925,7 @@ button[disabled] img{
     height: 24px;
 
     padding: 0px;
-    padding-right: 8px;
+    padding-right: 4px;
     padding-bottom: 4px;
 }
 
@@ -933,6 +935,7 @@ button[disabled] img{
 
     vertical-align: middle;
     padding-top: 4px;
+    margin-right: 10px;
 }
 
 .Notification p{
@@ -945,7 +948,7 @@ button[disabled] img{
     position: absolute;
     top: -5px;
     right: -4px;
-
+    padding-right: 8px;
 }
 
 /* 
@@ -1015,7 +1018,7 @@ button[disabled] img{
     gap: 0;
     margin: 0;
 
-    display: block;
+    display: flex;
 
     background-color: black;
 
@@ -1025,6 +1028,7 @@ button[disabled] img{
     box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px black inset;
 
     height: 100%;
+    width: 100%;
     margin-bottom: 1px;
 
     box-sizing: border-box;
@@ -1032,6 +1036,9 @@ button[disabled] img{
     overflow-y:auto;
     overflow-x:auto;
     font-weight:lighter;
+
+    flex-direction: column;
+    font-size: var(--commandprompt-textsize);
 }
 .WTerminal p{
     font-family: CMD;
@@ -1042,6 +1049,7 @@ button[disabled] img{
     height: auto;
     margin: 0;
     font-weight:lighter;
+    font-size: var(--commandprompt-textsize);
 }
 .WTerminal span{
     font-family: CMD;
@@ -1049,22 +1057,43 @@ button[disabled] img{
     word-spacing: -2px;
     margin: 0;
     font-weight:lighter;
+    margin-left: 10px;
+
+    flex: 0 1 auto;
+    font-size: var(--commandprompt-textsize);
+}
+.WTerminal section{
+    display: flex;
+    flex-wrap: wrap;
 }
 .WTerminal input[type="text"]{
+    max-height: 20px;
     border: none;
     background-color: transparent;
     box-shadow: none;
     color: white;
+    word-spacing: -2px;
 
     box-sizing: border-box;
-    width: 70%;
+    field-sizing: content;
     padding: 0;
     margin: 0;
+    margin-left: 10px;
     font-family: CMD;
     font-weight:lighter;
+    flex: 1;
+    font-size: var(--commandprompt-textsize);
 }
 .WTerminal input[type="text"]:focus{
     outline: none;
+}
+.WTerminal pre{
+    font-family: CMD;
+    color: white;
+    font-size: var(--commandprompt-textsize);
+}
+.WTerminal a{
+    font-size: var(--commandprompt-textsize);
 }
 .WNavegation{
     display: flex;

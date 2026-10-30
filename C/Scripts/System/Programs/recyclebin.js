@@ -1,7 +1,7 @@
 function RecyclebinExe(){
     let PID = Math.floor(Math.random() * 1000);
 
-    new explorer("Recycle Bin", PID,"The place where you let the destroyed ideas","400","270",undefined,false,true,true,true,false,false,true,true,
+    new explorer("Recycle Bin", PID,"The place where you let the destroyed ideas","400","270",undefined,false,true,true,true,false,false,true,true,null,
     `
     <div class="papelera">
         <div class="explorer_topbar">

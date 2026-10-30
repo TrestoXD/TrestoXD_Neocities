@@ -27,7 +27,7 @@ function cmdexe(title = "MS-DOS PROMPT", initialrute = "C:\\Web95", commandlist 
     // CORRECCIÓN 1: Combinar correctamente SYSTEM_COMMANDS y los comandos que pasas por parámetro
     commandlist = { ...SYSTEM_COMMANDS, ...commandlist };
 
-    new explorer(title, PID,"The run program is to run apps in a fast and easy way","650","450",'./Styles/windowsicons/msdos.ico',false,true,true,true,false,false,true,true,
+    new explorer(title, PID,"The run program is to run apps in a fast and easy way","650","450",'./Styles/windowsicons/msdos.ico',false,true,true,true,false,false,true,true,null,
     `
     <div class="WNavegation">
         <select id="${IDSELECTED}">

@@ -1,7 +1,7 @@
 function MsnewsEXE() {
     let PID = Math.floor(Math.random() * 1000);
 
-    new explorer("System News", PID, "The place where you let the destroyed ideas", "700", "600", undefined, false, true, true, true, false, false, true, true,
+    new explorer("System News", PID, "The place where you let the destroyed ideas", "700", "600", undefined, false, true, true, true, false, false, true, true,null,
         `
 <div class="webhelp">
     <map name="w95widget">

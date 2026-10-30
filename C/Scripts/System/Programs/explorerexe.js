@@ -13,7 +13,7 @@ let lastwindowpid = '00001';
 
 
 class explorer{
-    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", once = false, maximizable = true, minimizable = true, closable=true, ontop = false, isdialog = false, movable = true, buttonontaskbar = true, content = "Hello World! this is text here!"){
+    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", once = false, maximizable = true, minimizable = true, closable=true, ontop = false, isdialog = false, movable = true, buttonontaskbar = true, resizable = null, content = "Hello World! this is text here!"){
         this.title = title
         this.pid = pid
         this.description = description
@@ -30,6 +30,7 @@ class explorer{
         this.ontop = ontop
         this.movable = movable
         this.buttonontaskbar = buttonontaskbar
+        this.resizable = resizable !== null ? resizable : (this.maximizable || this.minimizable);
 
         let currentpid = parseInt(this.pid);
         if(this.once == false){
@@ -98,6 +99,10 @@ class explorer{
         // ADDS THE WINDOW TO YOUR SCREEN :D
         if(this.once == false || this.once == true && document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`) == null){
             windowlocation.insertAdjacentElement("beforeend", windows);
+            if(this.resizable){
+                makeWindowResizable(windows);
+            }
+
             console.log(`New Window created: TITLE: "${this.title}" PID: ${this.pid}`)
             console.log(document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`))
             // ADDS THE EVENT LISTNER
@@ -317,6 +322,10 @@ function explorerclickManager(event, title, pid) {
         activeMoveHandler = (e) => {
             let newX = e.clientX - startX;
             let newY = e.clientY - startY;
+
+            if (newY < 0) newY = 0;
+            if (newX > window.innerWidth - 50) newX = window.innerWidth - 50;
+
             CurrentWindow.style.top = newY + 'px';
             CurrentWindow.style.left = newX + 'px';
         };
@@ -379,4 +388,78 @@ function explorerrestore(title, pid){
 
     currentButton.setAttribute("onclick", `explorermaximize('${title}','${pid}')`);
     currentImage.src = './Styles/icons/maximize.svg'
+}
+function makeWindowResizable(winElement) {
+    // Definimos las 8 direcciones posibles
+    const directions = ['n', 's', 'e', 'w', 'nw', 'ne', 'sw', 'se'];
+
+    directions.forEach(dir => {
+        const handle = document.createElement('div');
+        handle.classList.add('resize-handle', dir);
+        winElement.appendChild(handle);
+
+        handle.addEventListener('mousedown', (e) => {
+            e.stopPropagation(); // Evita interferir con el arrastre de la Top-Bar
+            e.preventDefault();
+
+            // Guardamos coordenadas iniciales y dimensiones de la ventana
+            const startMouseX = e.clientX;
+            const startMouseY = e.clientY;
+
+            const startWidth = winElement.offsetWidth;
+            const startHeight = winElement.offsetHeight;
+            const startLeft = winElement.offsetLeft;
+            const startTop = winElement.offsetTop;
+
+            const minWidth = 150; // Ancho mínimo permitido
+            const minHeight = 100; // Alto mínimo permitido
+
+            function onMouseMove(e) {
+                const deltaX = e.clientX - startMouseX;
+                const deltaY = e.clientY - startMouseY;
+
+                // Modificar Este (Derecha)
+                if (dir.includes('e')) {
+                    const newWidth = startWidth + deltaX;
+                    if (newWidth > minWidth) {
+                        winElement.style.width = newWidth + 'px';
+                    }
+                }
+
+                // Modificar Sur (Abajo)
+                if (dir.includes('s')) {
+                    const newHeight = startHeight + deltaY;
+                    if (newHeight > minHeight) {
+                        winElement.style.height = newHeight + 'px';
+                    }
+                }
+
+                // Modificar Oeste (Izquierda)
+                if (dir.includes('w')) {
+                    const newWidth = startWidth - deltaX;
+                    if (newWidth > minWidth) {
+                        winElement.style.width = newWidth + 'px';
+                        winElement.style.left = (startLeft + deltaX) + 'px';
+                    }
+                }
+
+                // Modificar Norte (Arriba)
+                if (dir.includes('n')) {
+                    const newHeight = startHeight - deltaY;
+                    if (newHeight > minHeight) {
+                        winElement.style.height = newHeight + 'px';
+                        winElement.style.top = (startTop + deltaY) + 'px';
+                    }
+                }
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+    });
 }

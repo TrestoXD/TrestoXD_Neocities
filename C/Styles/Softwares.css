@@ -184,6 +184,7 @@ hr{
 /* Papelera */
 .papelera{
     padding-left: 2px;
+    height: 100%;
 }
 
 .papelera button{
@@ -225,7 +226,7 @@ hr{
     flex-direction: column;
     
     width: calc(100% - 4px);
-    height: 165px;
+    height: calc(100% - 62px);
 
     border: none;
     box-shadow: none;

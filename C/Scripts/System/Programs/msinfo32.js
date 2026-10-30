@@ -1,5 +1,5 @@
 function msinfo32exe(){
-    new explorer("System Information", undefined,"The program to chech the infromation of the system","500","500", null,false,true,true,true,false,false,true,true,
+    new explorer("System Information", undefined,"The program to chech the infromation of the system","500","500", null,false,true,true,true,false,false,true,true,null,
     `
     <div class="WNavInterior">
         <nav>

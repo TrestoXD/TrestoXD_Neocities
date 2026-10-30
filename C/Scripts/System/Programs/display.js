@@ -1,7 +1,7 @@
 var r = document.querySelector(':root');
 
 function displayexe(){
-    new explorer("Display Settings", undefined,"The Control panel is the centralized system management interface that allows you to view, configure, and customize OS settings, hardware and software","450","auto",'./Styles/windowsicons/msdos.ico',false,true,true,true,false,false,true,true,`
+    new explorer("Display Settings", undefined,"The Control panel is the centralized system management interface that allows you to view, configure, and customize OS settings, hardware and software","450","auto",'./Styles/windowsicons/msdos.ico',false,true,true,true,false,false,true,true,null,`
         <div class="display">
             <button class="display-button disabled">Background</button>
             <button class="display-button disabled">Screen Saver</button>

@@ -1,5 +1,5 @@
 function controlpanelexe(){
-    new explorer("Control panel", undefined,"The Control panel is the centralized system management interface that allows you to view, configure, and customize OS settings, hardware and software","450","250",'./Styles/windowsicons/msdos.ico',false,true,true,true,false,false,true,true,`
+    new explorer("Control panel", undefined,"The Control panel is the centralized system management interface that allows you to view, configure, and customize OS settings, hardware and software","450","250",'./Styles/windowsicons/msdos.ico',false,true,true,true,false,false,true,true,null,`
         <div class="explorer_topbar">
             <button class="disabled"><span class="underline">F</span>ile</button>
             <button class="disabled"><span class="underline">E</span>dit</button>

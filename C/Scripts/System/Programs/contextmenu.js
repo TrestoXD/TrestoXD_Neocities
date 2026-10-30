@@ -9,13 +9,13 @@ oncontextmenu = (e) => {
 
         if(e.target.closest(".overlay")){
         ContextmenuExe(x +'px', y +'px', false, true, `
-            <button id="conbt">Arrange Icons</Button>
-            <Button id="conbt">Line Up Icons</Button> <hr></hr> 
-            <button id="conbt" class="disabled">Paste</button>
-            <button id="conbt" class="disabled">Paste Shortcut</button>
-            <button id="conbt">Undo Delete</button> <hr></hr> 
-            <button id="conbt">New</button> <hr></hr> 
-            <button id="conbt" onclick='ErrorMenu("An error message to annoy you.", "Context menu Failed")' class='textbutt'>Properties</button>
+            <button >Arrange Icons</Button>
+            <Button >Line Up Icons</Button> <hr></hr> 
+            <button class="disabled">Paste</button>
+            <button class="disabled">Paste Shortcut</button>
+            <button >Undo Delete</button> <hr></hr> 
+            <button >New</button> <hr></hr> 
+            <button onclick='customerror("An error message to annoy you.", "Context menu Failed")' class='textbutt'>Properties</button>
         `);
         }
     }

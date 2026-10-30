@@ -1,7 +1,8 @@
 var reader = new FileReader;
 
 function notepadexe(dir){
-    new explorer("Notepad", undefined,"Notepad is an easy text editor for everyone!","450","265","./Styles/AppIcons/Notepad.ico",true,true,true,true,true,false,true,true,`
+    new explorer("Notepad", undefined,"Notepad is an easy text editor for everyone!","450","265","./Styles/AppIcons/Notepad.ico",true,true,true,true,true,false,true,true,null,
+        `
         <div class="explorer_topbar">
         <button class="disabled"><span class="underline">F</span>ile</button>
         <button class="" onclick="notepadeditmenu(this)"><span class="underline">E</span>dit</button>

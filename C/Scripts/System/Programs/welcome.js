@@ -37,7 +37,7 @@ function closenotif(){
 }
 
 function WelcomeExe(){
-    new explorer("Welcome", undefined,"Notepad is an easy text editor for everyone!","600","375",false,true,true,true,true,true,false,true,true,`
+    new explorer("Welcome", undefined,"Notepad is an easy text editor for everyone!","600","375",false,true,true,true,true,true,false,true,true,null,`
         <div class="WContent" style="padding-left:20px; padding-right:20px; margin-top: 25px;"> 
             <h1>Welcome to <span class="title-1">WEB</span> <span class="title-2">95</span></h1>
             <div class="Wsided-left"> 

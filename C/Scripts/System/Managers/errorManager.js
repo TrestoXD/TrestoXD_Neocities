@@ -9,11 +9,25 @@ function syserror(error){
     var Errorsound = new Audio(errorsoundData);
     Errorsound.play()
 
-    new explorer(title, undefined, "The error process!", '350', 'auto',false,false,false,false,false,true,false,true,false,
+    new explorer(title, undefined, "The error process!", '350', 'auto',false,false,false,false,false,true,false,true,false,null,
         `
         <div>
             <div class="window_error">
                 <img src="./Styles/AppIcons/fatalerror.ico">    <p>${error}</p>
+            </div>
+            <div class="window_error_button">
+                <button onclick="LocateCloseWindow(this)"> OK </button>
+            </div>    
+        </div>
+        `).BuildWindow();
+}
+
+function customerror(text,title){
+    new explorer(title, undefined, "The error process!", '350', 'auto',false,false,false,false,false,true,false,true,false,null,
+        `
+        <div>
+            <div class="window_error">
+                <img src="./Styles/AppIcons/fatalerror.ico">    <p>${text}</p>
             </div>
             <div class="window_error_button">
                 <button onclick="LocateCloseWindow(this)"> OK </button>

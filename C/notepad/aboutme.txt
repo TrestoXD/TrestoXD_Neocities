@@ -6,6 +6,14 @@ align: center
 Mi nombre es Vito Minaya González
 ===================================
 
-Me declaro como programador, tengo 18 anos. Actualmente cursando Desarrollo de Aplicaciones Multiplataforma (DAM), con un solido dominio tecnico en multiples lenguajes y pasion por el desarrollo de software. Experiencia practica en C, C++, C#, Java, Python y JavaScript, con conocimientos complementarios en Rust. Enfocado a conseguir un futuro mas brillante, escribir codigo bien optimizado y escalable, y crear soluciones tecnologicas que impacten positivamente a los usuarios. Mi meta actual es seguir expandiendo mis habilidades tecnicas, dominar nuevos paradigmas de desarrollo y colaborar en proyectos desafiantes de ingenieria de software.
+Sobre mí | Desarrollador de Software
 
-En este espacio comparto mis proyectos personales, experimentos de codigo y soluciones a problemas logicos. Siempre estoy abierto a nuevos retos conceptuales y oportunidades de desarrollo colaborativo.
+Me considero un apasionado de la programación y el desarrollo de software, con 18 años y actualmente cursando el ciclo formativo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
+
+Cuento con conocimientos técnicos en diferentes lenguajes de programación, entre ellos C, C++, C#, Java, Python y JavaScript, además de conocimientos complementarios en Rust. Me interesa especialmente el diseño y desarrollo de soluciones tecnológicas eficientes, optimizadas y escalables.
+
+Mi objetivo es seguir creciendo profesionalmente en el sector tecnológico, ampliar mis conocimientos, explorar nuevos paradigmas de programación y perfeccionar mis habilidades en ingeniería de software. Aspiro a desarrollar código limpio, estructurado y de calidad, creando aplicaciones que aporten valor y tengan un impacto positivo en sus usuarios.
+
+En este espacio comparto mis proyectos personales, experimentos de programación, desarrollos propios y soluciones a diferentes retos lógicos y tecnológicos. Considero cada proyecto una oportunidad para aprender, innovar y mejorar mis capacidades como desarrollador.
+
+Estoy siempre abierto a nuevos desafíos, al intercambio de conocimientos y a colaborar en proyectos tecnológicos que me permitan seguir evolucionando y afrontar nuevos retos en el mundo del desarrollo de software.

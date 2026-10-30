@@ -53,9 +53,10 @@ function reviewProperties(textfromfile){
         if(textfromfile.includes("align: center")){
             area = document.getElementById("txt").style.textAlign = "center";
         }
-        return textfromfile.replace(/^---[\s\S]*?---\s*/, '');
+        textfromfile = textfromfile.replace(/^---[\s\S]*?---\s*/, '');
     }
-    return textfromfile
+
+    return textfromfile;
 }
 
 function edit_clipboardcopy(){

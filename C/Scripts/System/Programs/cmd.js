@@ -15,6 +15,14 @@ const SYSTEM_COMMANDS = {
     },
     "help": function() {
         return "Comandos de sistema disponibles: welcome, help, borrate la cuenta";
+    },
+    "template": function() {
+        if(typeof TemplateEXE === "function") TemplateEXE();
+        return "Iniciando Template.exe...";
+    },
+    "recipe": function() {
+        if(typeof RecipeMasterExe === "function") RecipeMasterExe();
+        return "Iniciando RecipeMaster.exe...";
     }
 };
 

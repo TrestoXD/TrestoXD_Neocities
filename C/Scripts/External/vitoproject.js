@@ -8,10 +8,36 @@
     Abandoned   ![Static Badge](https://img.shields.io/badge/State-Abandonated-red?style=plastic)       Esta abandonado :c
 */
 
+async function readprojects() {
+    try{
+        const respuesta = await fetch("registry/projects.json");
+        if(!respuesta.ok) throw new Error("JSON NO DISPONIBLE");
+        const projects = await respuesta.json();
+        for (const item of projects.project){
+            let textcontent = 
+            `
+- Name:         ${item.name}
+- RepoLink:     ${item.repo}
+- RepoName:     ${item.repolink}
+- State:        ${item.state}
 
-const projectcommands = {
+- Lenguaje:     ${item.lenguaje}
+- Descripción:  ${item.description}
+            `
+            command = ("--" + item.name);
+            console.log(textcontent, command);
+            projectcommands[command] = `function(){return ${textcontent} }`;
+            console.log(projectcommands);
+        }
+    }   catch(error){
+        console.error(error);
+    } 
+}
+
+let projectcommands = {
     "--list": function() {
         return `
+prividenie
 dungeon 
 portfolio 
 olddays_newways 
@@ -30,53 +56,62 @@ Commands of Projects:
     },
     "--open dungeon": function(){
         return `
-- Name:        Dungeon
-- RepoLink:    <a href="https://github.com/TrestoXD/dungeon">LINK</a>
-- RepoName:    dungeon
+- Name:         Dungeon
+- RepoLink:     <a href="https://github.com/TrestoXD/dungeon">LINK</a>
+- RepoName:     dungeon
 
-- Lenguaje:    [Java]
-- Description: A Java 3D Game Engine made from Scratch 
-               without LWJGL 
+- Lenguaje:     [Java]
+- Description:  A Java 3D Game Engine made from Scratch 
+                without LWJGL 
         `
     },
     "--open portfolio": function(){
         return `
-- Name:        Portfolio
-- RepoLink:    <a href="https://github.com/TrestoXD/TrestoXD_Neocities">LINK</a>
-- RepoName:    TrestoXD_Neocities
-- State:       Active
+- Name:         Portfolio
+- RepoLink:     <a href="https://github.com/TrestoXD/TrestoXD_Neocities">LINK</a>
+- RepoName:     TrestoXD_Neocities
+- State:        Active
 
-- Lenguaje:    [Java Script]
-- Description: This Portfolio, pretty cool uh?
+- Lenguaje:     [Java Script]
+- Description:  This Portfolio, pretty cool uh?
         `
     },
     "--open olddays_newways": function(){
         return`
-- Name:        Old Days New Ways
-- RepoLink:    <a href="https://github.com/TrestoXD/OldDays_NewWays">LINK</a>
-- RepoName:    OldDays_NewWays
-- State:    
+- Name:         Old Days New Ways
+- RepoLink:     <a href="https://github.com/TrestoXD/OldDays_NewWays">LINK</a>
+- RepoName:     OldDays_NewWays
+- State:        Active
 
-- Lenguaje:    [Minecraft Datapack]
-- Description: This is a Minecraft Datapack that aims to 
-               balance the gameplay for Casual and 
-               "Golden Age" Players  
-- Wiki:        <a href="https://trestoxd.neocities.org/C/wiki/OldDays_NewWays/wiki-olddays-newways"> LINK </a>
+- Lenguaje:     [Minecraft Datapack]
+- Description:  This is a Minecraft Datapack that aims to 
+                balance the gameplay for Casual and 
+                "Golden Age" Players  
+- Wiki:         <a href="https://trestoxd.neocities.org/C/wiki/OldDays_NewWays/wiki-olddays-newways"> LINK </a>
 `
     },
     "--open ev": function(){
         return `
-- Name:        E.V.
-- RepoLink:    <a href="https://github.com/TrestoXD/E.V.">LINK</a>
-- RepoName:    E.V.
-- State:       
+- Name:         E.V.
+- RepoLink:     <a href="https://github.com/TrestoXD/E.V.">LINK</a>
+- RepoName:     E.V.
+- State:        Abandonated
 
-- Lenguaje:    [RUST]
-- Description: E.V. o Essential Virtual-assistant es un 
-               asistente de control multimedia en RUST
-
+- Lenguaje:     [RUST]
+- Description:  E.V. o Essential Virtual-assistant es un 
+                asistente de control multimedia en RUST
 `
-    }
+    },
+    "--open prividenie": function(){
+        return `
+- Name:         Prividenie
+- State:        Active
+
+- Lenguaje:     [C#]
+- Description:  Prividenie is a horror game developed in 
+                Unity.
+`
+    },
 };
 
 function ProjectsExe(){
@@ -90,4 +125,5 @@ function ProjectsExe(){
 =======================================
 If you need help use the "--help" command
         `);  
+    readprojects();
 }

@@ -8,32 +8,6 @@
     Abandoned   ![Static Badge](https://img.shields.io/badge/State-Abandonated-red?style=plastic)       Esta abandonado :c
 */
 
-async function readprojects() {
-    try{
-        const respuesta = await fetch("registry/projects.json");
-        if(!respuesta.ok) throw new Error("JSON NO DISPONIBLE");
-        const projects = await respuesta.json();
-        for (const item of projects.project){
-            let textcontent = 
-            `
-- Name:         ${item.name}
-- RepoLink:     ${item.repo}
-- RepoName:     ${item.repolink}
-- State:        ${item.state}
-
-- Lenguaje:     ${item.lenguaje}
-- Descripción:  ${item.description}
-            `
-            command = ("--" + item.name);
-            console.log(textcontent, command);
-            projectcommands[command] = `function(){return ${textcontent} }`;
-            console.log(projectcommands);
-        }
-    }   catch(error){
-        console.error(error);
-    } 
-}
-
 let projectcommands = {
     "--list": function() {
         return `
@@ -114,7 +88,35 @@ Commands of Projects:
     },
 };
 
+async function readprojects() {
+    try{
+        const respuesta = await fetch("registry/projects.json");
+        if(!respuesta.ok) throw new Error("JSON NO DISPONIBLE");
+        const projects = await respuesta.json();
+        for (const item of projects.project){
+            let textcontent = 
+            `
+- Name:         ${item.name}
+- RepoLink:     ${item.repo}
+- RepoName:     ${item.repolink}
+- State:        ${item.state}
+
+- Lenguaje:     ${item.lenguaje}
+- Descripción:  ${item.description}
+            `
+            //console.log(textcontent, command);
+            projectcommands[`--${item.name}`] = function skibidy (){return textcontent.toString };
+        }
+    }   catch(error){
+        console.error(error);
+    } 
+}
+
+
+
 function ProjectsExe(){
+    readprojects();
+    console.log(projectcommands);
     cmdexe("Github Projects", "", projectcommands, 
         `
 =======================================
@@ -125,5 +127,5 @@ function ProjectsExe(){
 =======================================
 If you need help use the "--help" command
         `);  
-    readprojects();
+    console.log(projectcommands);
 }

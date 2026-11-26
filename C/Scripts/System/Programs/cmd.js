@@ -102,6 +102,7 @@ function cmdexe(title = "MS-DOS PROMPT", initialrute = "C:\\Web95", commandlist 
             } 
             else {
                 result.innerHTML = `<section> <p>${commandValue} is not recognized as an internal or external command.</p> </section>`;
+                console.log(commandlist);
             }
 
             newPrompt.innerHTML = `<section> <span> ${initialrute} > </span><input type="text" id="${IDINPUT}" autocomplete="off"> </section>`;
